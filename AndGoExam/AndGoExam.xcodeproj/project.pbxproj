@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D668DD319A616290060C019 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D668DD219A616290060C019 /* CoreBluetooth.framework */; };
+		7D668DD619A616520060C019 /* UpdateServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D668DD519A616520060C019 /* UpdateServiceTableViewController.m */; };
+		7D668DD919A6168A0060C019 /* UpdateScanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D668DD819A6168A0060C019 /* UpdateScanTableViewController.m */; };
+		7D89537A19A45E7700AE132F /* GoPlusData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D89537919A45E7700AE132F /* GoPlusData.m */; };
+		7D89537D19A45F5500AE132F /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D89537C19A45F5500AE132F /* Utility.m */; };
+		7D89537F19A4628600AE132F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D89537E19A4628600AE132F /* CoreData.framework */; };
+		7D89538219A472AB00AE132F /* AndGoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D89538119A472AB00AE132F /* AndGoTableViewCell.m */; };
+		7D89538E19A47B5200AE132F /* goPlusBeacons.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D89538C19A47B5200AE132F /* goPlusBeacons.xcdatamodeld */; };
+		7D89539119A47BBA00AE132F /* Beacons.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D89539019A47BBA00AE132F /* Beacons.m */; };
+		7D89539D19A4877B00AE132F /* BeaconDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D89539C19A4877B00AE132F /* BeaconDatabase.m */; };
+		7D8953A019A48CF100AE132F /* ConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D89539F19A48CF100AE132F /* ConfigTableViewController.m */; };
+		7D8953A319A48D9300AE132F /* UUIDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8953A219A48D9200AE132F /* UUIDTableViewController.m */; };
+		7DC1D02619AAB5CC002C06A4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC1D02519AAB5CC002C06A4 /* CoreLocation.framework */; };
+		7DD9445F199B7235007EDBC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD9445E199B7235007EDBC1 /* Foundation.framework */; };
+		7DD94461199B7235007EDBC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD94460199B7235007EDBC1 /* CoreGraphics.framework */; };
+		7DD94463199B7235007EDBC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD94462199B7235007EDBC1 /* UIKit.framework */; };
+		7DD94469199B7235007EDBC1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DD94467199B7235007EDBC1 /* InfoPlist.strings */; };
+		7DD9446B199B7235007EDBC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD9446A199B7235007EDBC1 /* main.m */; };
+		7DD9446F199B7235007EDBC1 /* AndGoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD9446E199B7235007EDBC1 /* AndGoAppDelegate.m */; };
+		7DD94472199B7235007EDBC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD94470199B7235007EDBC1 /* Main.storyboard */; };
+		7DD94475199B7235007EDBC1 /* AndGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD94474199B7235007EDBC1 /* AndGoViewController.m */; };
+		7DD94477199B7235007EDBC1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DD94476199B7235007EDBC1 /* Images.xcassets */; };
+		7DD9447E199B7235007EDBC1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD9447D199B7235007EDBC1 /* XCTest.framework */; };
+		7DD9447F199B7235007EDBC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD9445E199B7235007EDBC1 /* Foundation.framework */; };
+		7DD94480199B7235007EDBC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD94462199B7235007EDBC1 /* UIKit.framework */; };
+		7DD94488199B7235007EDBC1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DD94486199B7235007EDBC1 /* InfoPlist.strings */; };
+		7DD9448A199B7235007EDBC1 /* AndGoExamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD94489199B7235007EDBC1 /* AndGoExamTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7DD94481199B7235007EDBC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DD94453199B7235007EDBC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DD9445A199B7235007EDBC1;
+			remoteInfo = AndGoExam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7D668DD219A616290060C019 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		7D668DD419A616520060C019 /* UpdateServiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateServiceTableViewController.h; path = ../UpdateServiceTableViewController.h; sourceTree = "<group>"; };
+		7D668DD519A616520060C019 /* UpdateServiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateServiceTableViewController.m; path = ../UpdateServiceTableViewController.m; sourceTree = "<group>"; };
+		7D668DD719A6168A0060C019 /* UpdateScanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateScanTableViewController.h; sourceTree = "<group>"; };
+		7D668DD819A6168A0060C019 /* UpdateScanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateScanTableViewController.m; sourceTree = "<group>"; };
+		7D89537819A45E7700AE132F /* GoPlusData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoPlusData.h; sourceTree = "<group>"; };
+		7D89537919A45E7700AE132F /* GoPlusData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoPlusData.m; sourceTree = "<group>"; };
+		7D89537B19A45F5500AE132F /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		7D89537C19A45F5500AE132F /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		7D89537E19A4628600AE132F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7D89538019A472AB00AE132F /* AndGoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndGoTableViewCell.h; sourceTree = "<group>"; };
+		7D89538119A472AB00AE132F /* AndGoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndGoTableViewCell.m; sourceTree = "<group>"; };
+		7D89538D19A47B5200AE132F /* goPlusBeacons.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = goPlusBeacons.xcdatamodel; sourceTree = "<group>"; };
+		7D89538F19A47BBA00AE132F /* Beacons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Beacons.h; path = AndGoExamTests/Beacons.h; sourceTree = "<group>"; };
+		7D89539019A47BBA00AE132F /* Beacons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Beacons.m; path = AndGoExamTests/Beacons.m; sourceTree = "<group>"; };
+		7D89539B19A4877B00AE132F /* BeaconDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconDatabase.h; sourceTree = "<group>"; };
+		7D89539C19A4877B00AE132F /* BeaconDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconDatabase.m; sourceTree = "<group>"; };
+		7D89539E19A48CF100AE132F /* ConfigTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigTableViewController.h; sourceTree = "<group>"; };
+		7D89539F19A48CF100AE132F /* ConfigTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigTableViewController.m; sourceTree = "<group>"; };
+		7D8953A119A48D9200AE132F /* UUIDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDTableViewController.h; sourceTree = "<group>"; };
+		7D8953A219A48D9200AE132F /* UUIDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDTableViewController.m; sourceTree = "<group>"; };
+		7DC1D02519AAB5CC002C06A4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7DD9445B199B7235007EDBC1 /* AndGoExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AndGoExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD9445E199B7235007EDBC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7DD94460199B7235007EDBC1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7DD94462199B7235007EDBC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7DD94466199B7235007EDBC1 /* AndGoExam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AndGoExam-Info.plist"; sourceTree = "<group>"; };
+		7DD94468199B7235007EDBC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7DD9446A199B7235007EDBC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7DD9446C199B7235007EDBC1 /* AndGoExam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AndGoExam-Prefix.pch"; sourceTree = "<group>"; };
+		7DD9446D199B7235007EDBC1 /* AndGoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AndGoAppDelegate.h; sourceTree = "<group>"; };
+		7DD9446E199B7235007EDBC1 /* AndGoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AndGoAppDelegate.m; sourceTree = "<group>"; };
+		7DD94471199B7235007EDBC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7DD94473199B7235007EDBC1 /* AndGoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AndGoViewController.h; sourceTree = "<group>"; };
+		7DD94474199B7235007EDBC1 /* AndGoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AndGoViewController.m; sourceTree = "<group>"; };
+		7DD94476199B7235007EDBC1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7DD9447C199B7235007EDBC1 /* AndGoExamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AndGoExamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD9447D199B7235007EDBC1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7DD94485199B7235007EDBC1 /* AndGoExamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AndGoExamTests-Info.plist"; sourceTree = "<group>"; };
+		7DD94487199B7235007EDBC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7DD94489199B7235007EDBC1 /* AndGoExamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AndGoExamTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DD94458199B7235007EDBC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DC1D02619AAB5CC002C06A4 /* CoreLocation.framework in Frameworks */,
+				7D668DD319A616290060C019 /* CoreBluetooth.framework in Frameworks */,
+				7D89537F19A4628600AE132F /* CoreData.framework in Frameworks */,
+				7DD94461199B7235007EDBC1 /* CoreGraphics.framework in Frameworks */,
+				7DD94463199B7235007EDBC1 /* UIKit.framework in Frameworks */,
+				7DD9445F199B7235007EDBC1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DD94479199B7235007EDBC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DD9447E199B7235007EDBC1 /* XCTest.framework in Frameworks */,
+				7DD94480199B7235007EDBC1 /* UIKit.framework in Frameworks */,
+				7DD9447F199B7235007EDBC1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D89537419A45E1600AE132F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7D89539B19A4877B00AE132F /* BeaconDatabase.h */,
+				7D89539C19A4877B00AE132F /* BeaconDatabase.m */,
+				7D89538F19A47BBA00AE132F /* Beacons.h */,
+				7D89539019A47BBA00AE132F /* Beacons.m */,
+			);
+			name = CoreData;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7DD94452199B7234007EDBC1 = {
+			isa = PBXGroup;
+			children = (
+				7DD94464199B7235007EDBC1 /* AndGoExam */,
+				7DD94483199B7235007EDBC1 /* AndGoExamTests */,
+				7DD9445D199B7235007EDBC1 /* Frameworks */,
+				7DD9445C199B7235007EDBC1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7DD9445C199B7235007EDBC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DD9445B199B7235007EDBC1 /* AndGoExam.app */,
+				7DD9447C199B7235007EDBC1 /* AndGoExamTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DD9445D199B7235007EDBC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DC1D02519AAB5CC002C06A4 /* CoreLocation.framework */,
+				7D668DD219A616290060C019 /* CoreBluetooth.framework */,
+				7D89537E19A4628600AE132F /* CoreData.framework */,
+				7DD9445E199B7235007EDBC1 /* Foundation.framework */,
+				7DD94460199B7235007EDBC1 /* CoreGraphics.framework */,
+				7DD94462199B7235007EDBC1 /* UIKit.framework */,
+				7DD9447D199B7235007EDBC1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DD94464199B7235007EDBC1 /* AndGoExam */ = {
+			isa = PBXGroup;
+			children = (
+				7D89537419A45E1600AE132F /* CoreData */,
+				7D89537B19A45F5500AE132F /* Utility.h */,
+				7D89537C19A45F5500AE132F /* Utility.m */,
+				7DD9446D199B7235007EDBC1 /* AndGoAppDelegate.h */,
+				7DD9446E199B7235007EDBC1 /* AndGoAppDelegate.m */,
+				7D8953A119A48D9200AE132F /* UUIDTableViewController.h */,
+				7D8953A219A48D9200AE132F /* UUIDTableViewController.m */,
+				7DD94473199B7235007EDBC1 /* AndGoViewController.h */,
+				7DD94474199B7235007EDBC1 /* AndGoViewController.m */,
+				7D89539E19A48CF100AE132F /* ConfigTableViewController.h */,
+				7D89539F19A48CF100AE132F /* ConfigTableViewController.m */,
+				7D668DD419A616520060C019 /* UpdateServiceTableViewController.h */,
+				7D668DD519A616520060C019 /* UpdateServiceTableViewController.m */,
+				7D668DD719A6168A0060C019 /* UpdateScanTableViewController.h */,
+				7D668DD819A6168A0060C019 /* UpdateScanTableViewController.m */,
+				7D89538019A472AB00AE132F /* AndGoTableViewCell.h */,
+				7D89538119A472AB00AE132F /* AndGoTableViewCell.m */,
+				7D89537819A45E7700AE132F /* GoPlusData.h */,
+				7D89537919A45E7700AE132F /* GoPlusData.m */,
+				7DD94470199B7235007EDBC1 /* Main.storyboard */,
+				7DD94476199B7235007EDBC1 /* Images.xcassets */,
+				7DD94465199B7235007EDBC1 /* Supporting Files */,
+			);
+			path = AndGoExam;
+			sourceTree = "<group>";
+		};
+		7DD94465199B7235007EDBC1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DD94466199B7235007EDBC1 /* AndGoExam-Info.plist */,
+				7DD94467199B7235007EDBC1 /* InfoPlist.strings */,
+				7DD9446A199B7235007EDBC1 /* main.m */,
+				7DD9446C199B7235007EDBC1 /* AndGoExam-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7DD94483199B7235007EDBC1 /* AndGoExamTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DD94489199B7235007EDBC1 /* AndGoExamTests.m */,
+				7DD94484199B7235007EDBC1 /* Supporting Files */,
+			);
+			path = AndGoExamTests;
+			sourceTree = "<group>";
+		};
+		7DD94484199B7235007EDBC1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D89538C19A47B5200AE132F /* goPlusBeacons.xcdatamodeld */,
+				7DD94485199B7235007EDBC1 /* AndGoExamTests-Info.plist */,
+				7DD94486199B7235007EDBC1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DD9445A199B7235007EDBC1 /* AndGoExam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DD9448D199B7235007EDBC1 /* Build configuration list for PBXNativeTarget "AndGoExam" */;
+			buildPhases = (
+				7DD94457199B7235007EDBC1 /* Sources */,
+				7DD94458199B7235007EDBC1 /* Frameworks */,
+				7DD94459199B7235007EDBC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AndGoExam;
+			productName = AndGoExam;
+			productReference = 7DD9445B199B7235007EDBC1 /* AndGoExam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7DD9447B199B7235007EDBC1 /* AndGoExamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DD94490199B7235007EDBC1 /* Build configuration list for PBXNativeTarget "AndGoExamTests" */;
+			buildPhases = (
+				7DD94478199B7235007EDBC1 /* Sources */,
+				7DD94479199B7235007EDBC1 /* Frameworks */,
+				7DD9447A199B7235007EDBC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DD94482199B7235007EDBC1 /* PBXTargetDependency */,
+			);
+			name = AndGoExamTests;
+			productName = AndGoExamTests;
+			productReference = 7DD9447C199B7235007EDBC1 /* AndGoExamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DD94453199B7235007EDBC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AndGo;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "IFFU.Co.,Ltd";
+				TargetAttributes = {
+					7DD9447B199B7235007EDBC1 = {
+						TestTargetID = 7DD9445A199B7235007EDBC1;
+					};
+				};
+			};
+			buildConfigurationList = 7DD94456199B7235007EDBC1 /* Build configuration list for PBXProject "AndGoExam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7DD94452199B7234007EDBC1;
+			productRefGroup = 7DD9445C199B7235007EDBC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DD9445A199B7235007EDBC1 /* AndGoExam */,
+				7DD9447B199B7235007EDBC1 /* AndGoExamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DD94459199B7235007EDBC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DD94477199B7235007EDBC1 /* Images.xcassets in Resources */,
+				7DD94469199B7235007EDBC1 /* InfoPlist.strings in Resources */,
+				7DD94472199B7235007EDBC1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DD9447A199B7235007EDBC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DD94488199B7235007EDBC1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DD94457199B7235007EDBC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D8953A019A48CF100AE132F /* ConfigTableViewController.m in Sources */,
+				7D668DD919A6168A0060C019 /* UpdateScanTableViewController.m in Sources */,
+				7D89539D19A4877B00AE132F /* BeaconDatabase.m in Sources */,
+				7D8953A319A48D9300AE132F /* UUIDTableViewController.m in Sources */,
+				7D89537D19A45F5500AE132F /* Utility.m in Sources */,
+				7D668DD619A616520060C019 /* UpdateServiceTableViewController.m in Sources */,
+				7DD94475199B7235007EDBC1 /* AndGoViewController.m in Sources */,
+				7D89538E19A47B5200AE132F /* goPlusBeacons.xcdatamodeld in Sources */,
+				7D89537A19A45E7700AE132F /* GoPlusData.m in Sources */,
+				7DD9446F199B7235007EDBC1 /* AndGoAppDelegate.m in Sources */,
+				7DD9446B199B7235007EDBC1 /* main.m in Sources */,
+				7D89538219A472AB00AE132F /* AndGoTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DD94478199B7235007EDBC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DD9448A199B7235007EDBC1 /* AndGoExamTests.m in Sources */,
+				7D89539119A47BBA00AE132F /* Beacons.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DD94482199B7235007EDBC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DD9445A199B7235007EDBC1 /* AndGoExam */;
+			targetProxy = 7DD94481199B7235007EDBC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7DD94467199B7235007EDBC1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DD94468199B7235007EDBC1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7DD94470199B7235007EDBC1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DD94471199B7235007EDBC1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7DD94486199B7235007EDBC1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DD94487199B7235007EDBC1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7DD9448B199B7235007EDBC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7DD9448C199B7235007EDBC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DD9448E199B7235007EDBC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AndGoExam/AndGoExam-Prefix.pch";
+				INFOPLIST_FILE = "AndGoExam/AndGoExam-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/andykwak/Project/libGoPlusSDK/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7DD9448F199B7235007EDBC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AndGoExam/AndGoExam-Prefix.pch";
+				INFOPLIST_FILE = "AndGoExam/AndGoExam-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/andykwak/Project/libGoPlusSDK/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7DD94491199B7235007EDBC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AndGoExam.app/AndGoExam";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AndGoExam/AndGoExam-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AndGoExamTests/AndGoExamTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7DD94492199B7235007EDBC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AndGoExam.app/AndGoExam";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AndGoExam/AndGoExam-Prefix.pch";
+				INFOPLIST_FILE = "AndGoExamTests/AndGoExamTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DD94456199B7235007EDBC1 /* Build configuration list for PBXProject "AndGoExam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DD9448B199B7235007EDBC1 /* Debug */,
+				7DD9448C199B7235007EDBC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DD9448D199B7235007EDBC1 /* Build configuration list for PBXNativeTarget "AndGoExam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DD9448E199B7235007EDBC1 /* Debug */,
+				7DD9448F199B7235007EDBC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DD94490199B7235007EDBC1 /* Build configuration list for PBXNativeTarget "AndGoExamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DD94491199B7235007EDBC1 /* Debug */,
+				7DD94492199B7235007EDBC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7D89538C19A47B5200AE132F /* goPlusBeacons.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7D89538D19A47B5200AE132F /* goPlusBeacons.xcdatamodel */,
+			);
+			currentVersion = 7D89538D19A47B5200AE132F /* goPlusBeacons.xcdatamodel */;
+			name = goPlusBeacons.xcdatamodeld;
+			path = ../goPlusBeacons.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7DD94453199B7235007EDBC1 /* Project object */;
+}
