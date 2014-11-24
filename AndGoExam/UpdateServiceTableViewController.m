@@ -23,12 +23,14 @@
 @property (strong, nonatomic)CBUUID *rssiCharacteristicUUID;
 @property (strong, nonatomic)CBUUID *txintervalCharacteristicUUID;
 @property (strong, nonatomic)CBUUID *txpowerCharacteristicUUID;
+@property (strong, nonatomic)CBUUID *uuidCharacteristicUUID;
 
 @property (strong, nonatomic)CBCharacteristic *majorCharacteristic;
 @property (strong, nonatomic)CBCharacteristic *minorCharacteristic;
 @property (strong, nonatomic)CBCharacteristic *rssiCharacteristic;
 @property (strong, nonatomic)CBCharacteristic *txintervalCharacteristic;
 @property (strong, nonatomic)CBCharacteristic *txpowerCharacteristic;
+@property (strong, nonatomic)CBCharacteristic *uuidCharacteristic;
 @property (strong, nonatomic) BeaconDatabase *database;
 
 @end
@@ -61,7 +63,8 @@
     self.rssiCharacteristicUUID = [CBUUID UUIDWithString:@"2A588023-4FB2-40F5-8204-85315DEF11C5"];
     self.txintervalCharacteristicUUID = [CBUUID UUIDWithString:@"2A588024-4FB2-40F5-8204-85315DEF11C5"];
     self.txpowerCharacteristicUUID = [CBUUID UUIDWithString:@"2A588025-4FB2-40F5-8204-85315DEF11C5"];
-    
+    self.uuidCharacteristicUUID = [CBUUID UUIDWithString:@"2A588026-4FB2-40F5-8204-85315DEF11C5"];
+ 
 }
 
 - (void)didReceiveMemoryWarning
@@ -125,6 +128,7 @@
     [self.rssiText resignFirstResponder];
     [self.txintervalText resignFirstResponder];
     [self.txpowerText resignFirstResponder];
+    [self.uuidText resignFirstResponder];
 
 }
 
@@ -136,7 +140,6 @@
     int rssi = [self.rssiText.text intValue];
     int txpower = [self.txpowerText.text intValue];
     int txinterval = [self.txintervalText.text intValue];
-    
     
     if (major > 65535 || minor > 65535) {
         [self showAlert:@"Beacon Major,Minor must be less than 65536" title:@"Error"];
@@ -161,12 +164,20 @@
         return;
         
     }
-    
+
+    if([self.uuidText.text length] != 36)
+    {
+        [self showAlert:@"Beacon UUID 128bit Value" title:@"Error"];
+        return;
+
+    }
+
     [self saveMajor];
     [self saveMinor];
     [self saveRSSI];
     [self saveTxIntval];
     [self saveTxPower];
+    [self saveUUID];
     
     [self showAlert:@"Beacon updated successfully!" title:@"Success"];
 }
@@ -224,6 +235,35 @@
     NSData *data = [NSData dataWithBytes:&txpower length:1];
     [self.beaconPeripheral writeValue:data forCharacteristic:self.txpowerCharacteristic type:CBCharacteristicWriteWithResponse];
 }
+
+
+- (void)saveUUID
+{
+    
+
+    uint8_t beaconUUID[16];
+    NSString *uuid = self.self.uuidText.text;
+    int beaconIndex = 0;
+    for (int index=0; index<16; index++) {
+        if ([[uuid substringWithRange:NSMakeRange(beaconIndex, 1)] isEqualToString:@"-"]) {
+            beaconIndex++;
+        }
+        NSString *byteString = [uuid substringWithRange:NSMakeRange(beaconIndex, 2)];
+        NSScanner *pScanner = [NSScanner scannerWithString:byteString];
+        unsigned int value;
+        [pScanner scanHexInt:&value];
+        NSLog(@"index %d UUID in String %@ UUID in Hex %02x",index,byteString,value);
+        beaconUUID[index] = value;
+        beaconIndex = beaconIndex + 2;
+    }
+    NSData *data = [NSData dataWithBytes:&beaconUUID length:16];
+    NSLog(@"Beacon UUID before save %@",data);
+    [self.beaconPeripheral writeValue:data forCharacteristic:self.uuidCharacteristic type:CBCharacteristicWriteWithResponse];
+
+}
+
+
+
 
 - (void) showAlert:(NSString *)message title:(NSString *)title
 {
@@ -324,8 +364,12 @@
                 self.txpowerCharacteristic = characteristic;
                 [self.beaconPeripheral readValueForCharacteristic:characteristic];
             }
+            else if ([characteristic.UUID isEqual:self.uuidCharacteristicUUID]) {
+                NSLog(@"UUID characteristic found: %@",characteristic.UUID);
+                self.uuidCharacteristic = characteristic;
+                [self.beaconPeripheral readValueForCharacteristic:characteristic];
+            }
 
-            
             
         }
     }
@@ -362,6 +406,12 @@
         NSLog(@"RSSI characteristic Value: %@",txpower);
         self.txpowerText.text = txpower;
     }
+    else if ([characteristic.UUID isEqual:self.uuidCharacteristicUUID]) {
+       NSString *uuid =[self decodeUUID:characteristic.value];
+      //  NSLog(@"UUID characteristic Value: %@",uuid);
+        self.uuidText.text = uuid;
+    }
+    
     
     
 }
@@ -439,6 +489,26 @@
 }
 
 
+-(NSString *) decodeUUID:(NSData *)data
+{
+    NSLog(@"decodeUUID");
+    
+    const uint8_t * value = [data bytes];
+    NSMutableString *uuidString = [[NSMutableString alloc]init];
+    for(int index=0; index<16; index++)
+    {
+        [uuidString appendFormat:@"%02X",value[index]];
+        if (index == 3 || index == 5 || index == 7 || index == 9) {
+            [uuidString appendString:@"-"];
+        }
+    }
+    return [uuidString copy];
+
+    
+}
+
+
+
 #pragma mark - Tableview delegates
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -463,9 +533,6 @@
     [headerView addSubview:sectionLabel];
     return headerView;
 }
-
-
-
 
 
 @end

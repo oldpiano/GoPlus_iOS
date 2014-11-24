@@ -12,6 +12,10 @@
 #import "AndGoTableViewCell.h"
 #import "ConfigTableViewController.h"
 
+
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
+
 @interface AndGoViewController ()
 {
     BOOL isAppInBackground;
@@ -38,9 +42,17 @@
     self.goplusTableView.dataSource = self;
     self.database = [[BeaconDatabase alloc]init];
 
+    
+    // New iOS 8 request for Always Authorization, required for iBeacons to work!
+    if([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [self.locationManager requestAlwaysAuthorization];
+    }
+    self.locationManager.pausesLocationUpdatesAutomatically = NO;
+    
   
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
+    
     
     isAppInBackground = NO;
     

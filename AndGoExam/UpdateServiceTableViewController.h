@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *rssiText;
 @property (weak, nonatomic) IBOutlet UITextField *txintervalText;
 @property (weak, nonatomic) IBOutlet UITextField *txpowerText;
+@property (weak, nonatomic) IBOutlet UITextField *uuidText;
 
 
 @property (strong, nonatomic) NSNumber *beaconMajor;

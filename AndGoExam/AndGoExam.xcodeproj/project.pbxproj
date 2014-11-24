@@ -269,6 +269,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "IFFU.Co.,Ltd";
 				TargetAttributes = {
+					7DD9445A199B7235007EDBC1 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					7DD9447B199B7235007EDBC1 = {
 						TestTargetID = 7DD9445A199B7235007EDBC1;
 					};
